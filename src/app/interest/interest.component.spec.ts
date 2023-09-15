@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { WorkExperienceComponent } from './work-experience.component';
+import { InterestComponent } from './interest.component';
 
-describe('WorkExperienceComponent', () => {
-  let component: WorkExperienceComponent;
-  let fixture: ComponentFixture<WorkExperienceComponent>;
+describe('InterestComponent', () => {
+  let component: InterestComponent;
+  let fixture: ComponentFixture<InterestComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule], 
-      declarations: [WorkExperienceComponent]
+      declarations: [InterestComponent]
     });
-    fixture = TestBed.createComponent(WorkExperienceComponent);
+    fixture = TestBed.createComponent(InterestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
