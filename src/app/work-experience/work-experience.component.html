@@ -1,1 +1,22 @@
-<p>work-experience works!</p>
+<div>
+    <div>
+        <div>
+            <h2>Experiencia Laboral</h2>
+        </div>
+    <div *ngFor="let workExperience of workExperiences; let i = index">
+        <div class="indicator indicator-{{ i + 1 }}"></div>
+        <div class="work-experience-details">
+            <h3>{{ workExperience.job }}</h3>
+        <div>
+            <p>{{ workExperience.company }}</p>
+            <p>{{ workExperience.city }}, {{ workExperience.country }}</p>
+            <p>{{ workExperience.startDate }} - {{ workExperience.endDate }}</p>
+          </div>
+          <h4>Logros:</h4>
+          <ul>
+            <li *ngFor="let accomplishment of workExperience.accomplishments">{{ accomplishment.accomplishment }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>

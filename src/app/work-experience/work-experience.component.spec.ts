@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { WorkExperienceComponent } from './work-experience.component';
 
@@ -8,6 +9,7 @@ describe('WorkExperienceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], 
       declarations: [WorkExperienceComponent]
     });
     fixture = TestBed.createComponent(WorkExperienceComponent);
