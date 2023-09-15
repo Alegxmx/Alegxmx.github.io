@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { SkillComponent } from './skill.component';
 
@@ -8,6 +9,7 @@ describe('SkillComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], 
       declarations: [SkillComponent]
     });
     fixture = TestBed.createComponent(SkillComponent);
