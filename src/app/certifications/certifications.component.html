@@ -1,0 +1,15 @@
+<div >
+    <div >
+      <div>
+        <h2 >Certificados</h2>
+      </div>
+  
+      <div *ngFor="let Certificados of Certifications; let i = index" >
+        <div >
+                <h3>{{ Certificados.titulo }}</h3>
+                <p>{{ Certificados.descripcion }}</p>
+                <p>{{ Certificados.ano }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
