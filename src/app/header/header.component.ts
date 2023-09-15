@@ -8,21 +8,30 @@ import { HeaderService } from '../services/header.service';
 })
 export class HeaderComponent implements OnInit {
 	
-   constructor(private headerService: HeaderService) {}
+  constructor(private headerService: HeaderService) {}
 
-   name : string = "Erick Barrena";
-   titulos : string = "PhD";
-   mision : string = "ser competitivo internacionalmente";
-   foto : string = "https://firebasestorage.googleapis.com/v0/b/mycv-codigyx.appspot.com/o/photo_2023-02-02_22-21-48.jpg?alt=media&token=d3e3c558-22be-49d0-bbc5-56f1d4e6a76d";
+  name : string = "";
+  titulos : string = "";
+  mision : string = "";
+  cel:String="";
+  email:String="";
+  redsocial:String="";
+  foto : string = "";
+  ubicacion:string="";
 
-   ngOnInit(): void {
-	 this.headerService.getHeader()
-	 .subscribe( (data: any) => {
-	   console.log(data);
-	   //alert(data);
-	   this.name = data.name;
-	   this.titulos = data.titulos;
-	   this.foto = data.foto;
-	   });
-   }
+  ngOnInit(): void {
+    this.headerService.getHeader()
+    .subscribe( (data: any) => {
+      console.log(data);
+      //alert(data);
+      this.name = data.name;
+      this.titulos = data.titulos;
+      this.titulos = data.grades;
+      this.foto = data.foto;
+      this.mision=data.mision;
+      this.cel=data.cel;
+      this.email=data.email;
+      this.ubicacion=data.ubication;
+      });
+    }
 }
