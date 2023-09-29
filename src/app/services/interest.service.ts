@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class InterestService {
 
   constructor(private http: HttpClient) {}
-  apiURL = 'http://localhost:8080/interests';
+  apiURL = 'https://api-cv-service-alegxmx.cloud.okteto.net/interests';
 
   //Http Options
   httpOptions = {

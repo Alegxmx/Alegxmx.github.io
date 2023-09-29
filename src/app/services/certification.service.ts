@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CertificationService {
 
   constructor(private http: HttpClient) {}
-  apiURL = 'http://localhost:8080/certifications';
+  apiURL = 'https://api-cv-service-alegxmx.cloud.okteto.net/certifications';
 
   //Http Options
   httpOptions = {
